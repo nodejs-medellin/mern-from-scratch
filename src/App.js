@@ -12,14 +12,29 @@ import {
 class App extends React.Component {
   constructor(props, context){
     super(props, context);
-    this.state = {};
+    this.state = {
+      message: 'hello world'
+    };
+    this.changeMessage = this.changeMessage.bind(this);
+  }
+  
+  changeMessage (event) {
+    event.preventDefault();
+    this.setState({
+      message: 'hello from click'
+    });
   }
   
   render() {
     return (
       <Router>
         <div>
-          <h1>hello mascotas</h1>
+          <h1>{this.state.message}</h1>
+          <a
+            onClick={this.changeMessage}
+          >
+            change message state
+          </a>
         </div>
       </Router>
     );
