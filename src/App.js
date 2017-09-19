@@ -8,6 +8,7 @@ import {
   Route
 } from 'react-router-dom';
 import MascotasCreate from "./components/MascotasCreate";
+import Header from './components/Header';
 
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+          <Header/>
           <Route exact path="/" component={MascotasCreate}/>
         </div>
       </Router>

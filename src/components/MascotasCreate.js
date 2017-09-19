@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from './Header';
-
 const MascotasList = () => {
   return (
     <div>
-      <Header/>
       <div className="jumbotron">
         <h1>Mis mascotas</h1>
       </div>
