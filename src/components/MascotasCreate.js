@@ -1,22 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from './Header';
 
 const MascotasList = () => {
   return (
-    <div className="container">
-      <div className="header clearfix">
-        <nav>
-          <ul className="nav nav-pills pull-right">
-            <li className="active" role="presentation">
-              <a href="/">Home</a>
-            </li>
-            <li role="presentation">
-              <a href="/mascotas">Mascotas</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 className="text-muted">Intro React</h3>
-      </div>
+    <div>
+      <Header/>
       <div className="jumbotron">
         <h1>Mis mascotas</h1>
       </div>
