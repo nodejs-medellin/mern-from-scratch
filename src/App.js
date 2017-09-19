@@ -1,21 +1,42 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+//import * as mascotaActions from './actions/mascotaActions';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+//import MascotasList from './components/MascotasList';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props, context){
+    super(props, context);
+    this.state = {};
+  }
+  
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <h1>hello mascotas</h1>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
 
-export default App;
+App.propTypes = {};
+
+App.defaultProps = {};
+
+const mapStateToProps = (state, ownProps) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
