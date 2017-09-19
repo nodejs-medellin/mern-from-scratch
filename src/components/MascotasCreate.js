@@ -4,7 +4,7 @@ const MascotasList = () => {
   return (
     <div className="row marketing">
       <div className="col-lg-12">
-        <h1 id="dashboard-title">crear mascota</h1>
+        <h1 id="dashboard-title">crear mascota 1</h1>
         <form>
           <div className="form-group">
             <label htmlFor="propietario">Nombre Propietario</label>
