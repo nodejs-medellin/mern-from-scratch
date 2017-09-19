@@ -16,7 +16,6 @@ const Header = () => {
       </nav>
       <h3 className="text-muted">Intro React</h3>
     </div>
-    
   );
 };
 

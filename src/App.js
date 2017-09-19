@@ -9,7 +9,8 @@ import {
 } from 'react-router-dom';
 import MascotasCreate from "./components/MascotasCreate";
 import Header from './components/Header';
-
+import Footer from './components/Footer';
+import Jumbotron from './components/Jumbotron';
 
 class App extends React.Component {
   constructor(props, context){
@@ -22,7 +23,9 @@ class App extends React.Component {
       <Router>
         <div>
           <Header/>
+          <Jumbotron/>
           <Route exact path="/" component={MascotasCreate}/>
+          <Footer/>
         </div>
       </Router>
     );
