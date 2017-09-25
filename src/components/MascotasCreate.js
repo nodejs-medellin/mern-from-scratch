@@ -1,42 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const MascotasList = () => {
+import MascotasTypes from './form-controls-mascotas/MascotasTypes';
+import MascotasNombre from './form-controls-mascotas/MascotasNombre';
+import MascotasSubmit from './form-controls-mascotas/MascotasSubmit';
+import MascotasPropietario from './form-controls-mascotas/MascotasPropietario';
+import MascotasPropietarioEmail from './form-controls-mascotas/MascotasPropietarioEmail';
+
+const MascotasCreate = () => {
   return (
     <div className="row marketing">
       <div className="col-lg-12">
-        <h1 id="dashboard-title">crear mascota 1</h1>
+        <h1 id="dashboard-title">Crear Mascota</h1>
         <form>
-          <div className="form-group">
-            <label htmlFor="propietario">Nombre Propietario</label>
-            <input className="form-control" id="propietario" type="text" name="propietario" placeholder="Propietario"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="mascota">Nombre Mascota</label>
-            <input className="form-control" id="mascota" type="text" name="mascota" placeholder="Propietario"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input className="form-control" id="email" type="email" name="email" placeholder="Email"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="tipo">Tipo de mascota</label>
-            <select className="form-control" id="tipo" name="tipo">
-              <option value="" disabled>seleccione</option>
-              <option value="perro">perro</option>
-              <option value="gato">gato</option>
-              <option value="tortuga">tortuga</option>
-              <option value="onitorrinco">onitorrinco</option>
-            </select>
-          </div>
-          <button className="btn btn-default" type="submit">Submit</button>
+          <MascotasNombre controlName='mascota' controlTitle='Nombre de la mascota' controlPlaceH='Ej: Homero'/>
+          <MascotasTypes controlName='tipo' controlTitle='Tipo de mascota'/>
+          <MascotasPropietario controlName='propietario' controlTitle='Nombre del propietario' controlPlaceH='Ej: Pepito Perez'/>
+          <MascotasPropietarioEmail controlName='email'  controlTitle='Email del propietario' controlPlaceH='Ej: pepitoperez@email.com'/>
+          <MascotasSubmit controlTitle='Crear' controlPlaceH='Ej: Homero'/>
         </form>
       </div>
     </div>
   );
 };
 
-MascotasList.propTypes = {};
-
-MascotasList.defaultTypes = {};
-
-export default MascotasList;
+MascotasCreate.propTypes = {};
+MascotasCreate.defaultTypes = {};
+export default MascotasCreate;
