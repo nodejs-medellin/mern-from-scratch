@@ -6,11 +6,12 @@ import emailPropietario from './form-parts/emailPropietario';
 import typeMascota from './form-parts/typeMascota';
 import submitMascota from './form-parts/submitMascota';
 
-const MascotasList = () => {
+const MascotasCreate = () => {
+
   return (
     <div className="row marketing">
       <div className="col-lg-12">
-        <h1 id="dashboard-title">crear mascota 1</h1>
+        <h1 id="dashboard-title">Crear Mascota</h1>
         <form>
           <namePropietario title="Nombre Propetario" name="propetario"/>
           <nameMascota title="Nombre Mascota" name="mascota"/>
@@ -24,8 +25,6 @@ const MascotasList = () => {
   );
 };
 
-MascotasList.propTypes = {};
-
-MascotasList.defaultTypes = {};
-
-export default MascotasList;
+MascotasCreate.propTypes = {};
+MascotasCreate.defaultTypes = {};
+export default MascotasCreate;
