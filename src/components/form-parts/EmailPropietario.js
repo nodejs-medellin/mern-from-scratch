@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const emailPropietario = ({name, title}) => {
+const EmailPropietario = ({name, title}) => {
   return ( 
   	<div className="form-group">
       <label htmlFor={name}>{title}</label>
@@ -10,8 +10,8 @@ const emailPropietario = ({name, title}) => {
   );
 }
 
-emailPropietario.propTypes = {};
+EmailPropietario.propTypes = {};
 
-emailPropietario.defaultTypes = {};
+EmailPropietario.defaultTypes = {};
 
-export default emailPropietario;
+export default EmailPropietario;

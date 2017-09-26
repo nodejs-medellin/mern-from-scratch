@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const namePropietario = ({name, title}) => {
+const NamePropietario = ({name, title}) => {
   return ( 
   	<div className="form-group">
       <label htmlFor={name}>{title}</label>
@@ -10,8 +10,8 @@ const namePropietario = ({name, title}) => {
   );
 }
 
-namePropietario.propTypes = {};
+NamePropietario.propTypes = {};
 
-namePropietario.defaultTypes = {};
+NamePropietario.defaultTypes = {};
 
-export default namePropietario;
+export default NamePropietario;

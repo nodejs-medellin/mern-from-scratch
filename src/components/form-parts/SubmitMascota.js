@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const submitMascota = ({type}) => {
+const SubmitMascota = ({type}) => {
   return ( 
   	<button className="btn btn-default" type={type}>Submit</button>
   );
 }
 
-submitMascota.propTypes = {};
+SubmitMascota.propTypes = {};
 
-submitMascota.defaultTypes = {};
+SubmitMascota.defaultTypes = {};
 
-export default submitMascota;
+export default SubmitMascota;
