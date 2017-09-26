@@ -18,7 +18,6 @@ const MascotasCreate = () => {
           <emailPropietario title="Email" name="email"/>
           <typeMascota title="Tipo de Mascota" name="tipo"/>
           <submitMascota type="submit"/>
-          <button className="btn btn-default" type="submit">Submit</button>
         </form>
       </div>
     </div>
