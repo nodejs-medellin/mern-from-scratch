@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const submitMascota = (type) => {
+const submitMascota = ({type}) => {
   return ( 
   	<button className="btn btn-default" type={type}>Submit</button>
   );

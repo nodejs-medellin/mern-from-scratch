@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const emailPropietario = (name, title) => {
+const emailPropietario = ({name, title}) => {
   return ( 
   	<div className="form-group">
       <label htmlFor={name}>{title}</label>

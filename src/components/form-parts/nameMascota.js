@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const nameMascota = (name, title) => {
+const nameMascota = ({name, title}) => {
   return ( 
   	<div className="form-group">
       <label htmlFor={name}>{title}</label>
