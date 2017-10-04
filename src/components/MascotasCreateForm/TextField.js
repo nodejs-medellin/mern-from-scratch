@@ -5,7 +5,14 @@ const TextField = (props) => {
   return ( 
   	<div className="form-group">
       <label htmlFor={props.name}>{props.title}</label>
-      <input className="form-control" id={props.name} type="text" name={props.name} placeholder={props.title} />
+      <input
+        onChange={props.onChange}
+        className="form-control"
+        id={props.name}
+        type="text"
+        name={props.name}
+        placeholder={props.title}
+      />
     </div>
   );
 }
