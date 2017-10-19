@@ -5,7 +5,12 @@ const SelectField = (props) => {
   return ( 
     <div>
       <label htmlFor={props.name}>{props.title}</label>
-      <select className="form-control" id={props.name} name={props.name}>
+      <select 
+        onChange={props.onChange}
+        value={props.value} 
+        className="form-control" 
+        id={props.name} 
+        name={props.name}>
         <option value="" disabled>seleccione</option>
         <option value="perro">perro</option>
         <option value="gato">gato</option>
@@ -16,8 +21,12 @@ const SelectField = (props) => {
   );
 }
 
-SelectField.propTypes = {};
+SelectField.propTypes = {
+  value: PropTypes.string
+};
 
-SelectField.defaultTypes = {};
+SelectField.defaultProps = {
+  value: ''
+};
 
 export default SelectField;

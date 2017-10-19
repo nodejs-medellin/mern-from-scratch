@@ -12,13 +12,18 @@ const TextField = (props) => {
         type="text"
         name={props.name}
         placeholder={props.title}
+        value={props.value}
       />
     </div>
   );
 }
 
-TextField.propTypes = {};
+TextField.propTypes = {
+  value: PropTypes.string
+};
 
-TextField.defaultTypes = {};
+TextField.defaultProps = {
+  value: ''
+};
 
 export default TextField;

@@ -5,13 +5,25 @@ const EmailField = (props) => {
   return ( 
   	<div className="form-group">
     	<label htmlFor={props.name}>{props.title}</label>
-    	<input className="form-control" id={props.name} type="email" name={props.name} placeholder={props.title}/>
+    	<input 
+        onChange={props.onChange}
+        className="form-control" 
+        id={props.name} 
+        type="email" 
+        name={props.name} 
+        placeholder={props.title}
+        value={props.value}
+      />
     </div>
   );
 }
 
-EmailField.propTypes = {};
+EmailField.propTypes = {
+  value: PropTypes.string
+};
 
-EmailField.defaultTypes = {};
+EmailField.defaultProps = {
+  value: ''
+};
 
 export default EmailField;

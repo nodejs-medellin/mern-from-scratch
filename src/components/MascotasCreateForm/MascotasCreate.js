@@ -10,7 +10,10 @@ class MascotasCreate extends React.Component {
     super(props, context);
     this.state = {
       mascota: {
-        propietario: 'piero'
+        propietario: '',
+        mascota: '',
+        email: '',
+        tipo: ''
       }
     };
     this._handleMascotaState = this._handleMascotaState.bind(this);
@@ -34,11 +37,27 @@ class MascotasCreate extends React.Component {
             <TextField
               onChange={this._handleMascotaState}
               title="Nombre Propietario"
-              name="propetario"
+              name="propietario"
+              value={this.state.mascota.propietario}
             />
-            <TextField title="Nombre Mascota" name="mascota"/>
-            <EmailField title="Email" name="email"/>
-            <SelectField title="Tipo de Mascota" name="tipo"/>
+            <TextField 
+              onChange={this._handleMascotaState}
+              title="Nombre Mascota" 
+              name="mascota"
+              value={this.state.mascota.mascota}
+            />
+            <EmailField 
+              onChange={this._handleMascotaState}
+              title="Email" 
+              name="email"
+              value={this.state.mascota.email}
+            />
+            <SelectField 
+              onChange={this._handleMascotaState}
+              title="Tipo de Mascota" 
+              name="tipo"
+              value={this.state.mascota.tipo}
+            />
             <SubmitButton type="submit"/>
           </form>
         </div>
