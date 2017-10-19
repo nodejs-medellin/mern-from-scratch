@@ -4,6 +4,9 @@ import TextField from './TextField';
 import EmailField from './EmailField';
 import SelectField from './SelectField';
 import SubmitButton from './SubmitButton';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as mascotaActions from '../../actions/mascotaActions';
 
 class MascotasCreate extends React.Component {
   constructor(props, context) {
@@ -17,6 +20,16 @@ class MascotasCreate extends React.Component {
       }
     };
     this._handleMascotaState = this._handleMascotaState.bind(this);
+    this._saveMascota = this._saveMascota.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(typeof nextProps.mascota !== 'undefined' &&
+    this.state.mascota !== nextProps.mascota) {
+      this.setState({
+          mascota: nextProps.mascota
+      });
+    }
   }
   
   _handleMascotaState(event) {
@@ -27,13 +40,35 @@ class MascotasCreate extends React.Component {
       mascota
     });
   }
-  
+
+  _saveMascota(event) {
+    event.preventDefault();
+    if(this.state.mascota &&
+        this.state.mascota.propietario &&
+        this.state.mascota.propietario.length &&
+        this.state.mascota.mascota &&
+        this.state.mascota.mascota.length &&
+        this.state.mascota.tipo &&
+        this.state.mascota.tipo.length) {
+      let mascota = Object.assign({}, this.state.mascota);
+      this.props.actions.saveMascotaAction(mascota)
+          .then(()=>{
+
+          })
+          .catch((err)=>{
+
+          })
+    }
+  }
+
   render() {
     return (
       <div className="row marketing">
         <div className="col-lg-12">
           <h1 id="dashboard-title">crear mascota 1</h1>
-          <form>
+          <form
+              onSubmit={this._saveMascota}
+          >
             <TextField
               onChange={this._handleMascotaState}
               title="Nombre Propietario"
@@ -70,4 +105,16 @@ MascotasCreate.propTypes = {};
 
 MascotasCreate.defaultTypes = {};
 
-export default MascotasCreate;
+const mapStateToProps = (state, ownProps) => {
+  return {
+      mascota: state.mascotas.mascota
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(mascotaActions, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MascotasCreate);

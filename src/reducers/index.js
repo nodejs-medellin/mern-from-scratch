@@ -1,12 +1,9 @@
 import {combineReducers} from 'redux';
-//import login from './loginReducer';
-//import search from './searchReducer';
-//import current from './currentReducer';
+import mascotas from './mascotaReducer';
+
 
 const rootReducer = combineReducers({
-  //login,
-  //search,
-  //current
+  mascotas
 });
 
 export default rootReducer;
